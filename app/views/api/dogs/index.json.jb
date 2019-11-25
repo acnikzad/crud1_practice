@@ -1,0 +1,12 @@
+@dogs.map do |dog|
+
+{
+  id: dog.id,
+  name: dog.name,
+  breed: dog.breed,
+  age: dog.age,
+  color: dog.color,
+  bio: dog.bio,
+  adoptable: dog.adoptable
+}
+end

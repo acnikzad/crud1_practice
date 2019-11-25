@@ -1,0 +1,9 @@
+{
+  id: dogs.id,
+  name: dogs.name,
+  breed: dogs.breed,
+  age: dogs.age,
+  color: dogs.color,
+  bio: dogs.bio,
+  adoptable: dogs.adoptable
+}
