@@ -20,6 +20,19 @@ class Api::DogsController < ApplicationController
   end
 
   def update
+    @dog = Dog.find_by(id: params[:id])
+    @dog.name = params[:name] || @dog.name
+    @dog.breed = params[:breed] || @dog.breed
+    @dog.age = params[:age] || @dog.age
+    @dog.color = params[:color] || @dog.color
+    @dog.bio = params[:bio] || @dog.bio
+    @dog.adoptable = params[:adoptable] || @dog.adoptable
+
+    # if @dog.save
+      render 'show.json.jb'
+    # else
+    #   render json: {errors: @dog.errors.full_messages}, status: :unprocessable_entity
+    # end
   end
 
 
