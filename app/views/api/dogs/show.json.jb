@@ -1,1 +1,1 @@
-render partial: "dogs.json.jb", locals: {dogs: @dogs}
+render partial: "dog.json.jb", locals: {dog: @dog}

@@ -5,8 +5,16 @@ class Api::DogsController < ApplicationController
     render 'index.json.jb'
   end
 
+  def show
+    the_id = params[:id]
+    @dog =Dog.find_by(id: the_id)
+    render "show.json.jb"
+  end
+
+
+
   def create
-    @dogs = Dog.new(
+    @dog = Dog.new(
 
   name: params[:name],
   breed: params[:breed],
@@ -15,7 +23,7 @@ class Api::DogsController < ApplicationController
   bio: params[:bio],
   adoptable: params[:adoptable]
       )
-  @dogs.save
+  @dog.save
   render 'show.json.jb'
   end
 
@@ -35,6 +43,12 @@ class Api::DogsController < ApplicationController
     end
   end
 
+  def destroy
+    @dog = Dog.find_by(id: params[:id])
 
+    @dog.destroy
+    @dog.save
 
+    render "destroy.json.jb"
+  end
 end
