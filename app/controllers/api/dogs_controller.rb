@@ -28,12 +28,13 @@ class Api::DogsController < ApplicationController
     @dog.bio = params[:bio] || @dog.bio
     @dog.adoptable = params[:adoptable] || @dog.adoptable
 
-    # if @dog.save
+    if @dog.save
       render 'show.json.jb'
-    # else
-    #   render json: {errors: @dog.errors.full_messages}, status: :unprocessable_entity
-    # end
+    else
+      render json: {errors: @dog.errors.full_messages}, status: :unprocessable_entity
+    end
   end
+
 
 
 end

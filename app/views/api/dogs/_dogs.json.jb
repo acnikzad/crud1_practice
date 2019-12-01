@@ -1,9 +1,9 @@
 {
-  id: dogs.id,
-  name: dogs.name,
-  breed: dogs.breed,
-  age: dogs.age,
-  color: dogs.color,
-  bio: dogs.bio,
-  adoptable: dogs.adoptable
+  id: @dog.id,
+  name: @dog.name,
+  breed: @dog.breed,
+  age: @dog.age,
+  color: @dog.color,
+  bio: @dog.bio,
+  adoptable: @dog.adoptable
 }
